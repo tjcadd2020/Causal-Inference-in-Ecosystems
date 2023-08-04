@@ -39,10 +39,7 @@ def write_gml(graph_edge): ### convert edge csv into .dot
      return dot_str
 
 
-#CD_graph_edge = pd.read_csv('CD_graph_edges.csv')
-#CD_causal_inference_df = pd.read_csv('CD_causal_inference_df.csv')# row was sample, col was gene, the last col was group/condition info
-#CD_dot = write_dot(CD_graph_edge)  ## convert graghfile to dot
-#CD_DEG = list(CD_graph_edge.loc[CD_graph_edge['target']=='IBD']['source'])
+
 
 graph = pd.read_csv('dowhy_graph_input_CD.csv',index_col = 0)
 graph_dot = write_dot(graph)
